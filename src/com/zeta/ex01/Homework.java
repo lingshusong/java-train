@@ -14,9 +14,28 @@ public class Homework {
      * 方法的骨架已经写好，请编写内部实现，不要修改方法的签名。
      */
     public static String arrayToString(int[] array) {
+
+
         String arrayString = "";
 
         // write your code here.
+        if (array.length > 0)
+        {
+            arrayString += "{" ;
+            for (int i = 0 ; i < array.length ; i++)
+            {
+                arrayString += array[i] ;
+
+                if (i != array.length)
+                {
+
+                    arrayString += ",";
+                }
+
+            }
+            arrayString += "}";
+        }
+
 
         return arrayString;
     }
@@ -25,6 +44,22 @@ public class Homework {
         String arrayString = "";
 
         // write your code here.
+        if (array.length > 0)
+        {
+            arrayString += "{" ;
+
+            for (int i = 0 ; i < array.length ; i++)
+            {
+                arrayString += array[i] ;
+
+                if (i != array.length)
+                {
+                    arrayString += ",";
+                }
+
+            }
+            arrayString += "}";
+        }
 
         return arrayString;
     }
@@ -39,6 +74,11 @@ public class Homework {
         boolean exists = false;
 
         // write your code here.
+        for ( int i = 0;i < array.length;i++){
+            if (array[i] == key){
+                exists = true;
+            }
+        }
 
         return exists;
     }
@@ -54,6 +94,13 @@ public class Homework {
         int index = -1;
 
         // write your code here.
+        for (int i = 0 ; i < array.length ; i++)
+        {
+            if (array[i] == key)
+            {
+                index = i + 1;
+            }
+        }
 
         return index;
     }
@@ -68,6 +115,23 @@ public class Homework {
         boolean equals = false;
 
         // write your code here.
+        boolean diff = false;
+
+        if (array1.length == array2.length)
+        {
+            for ( int i = 0;i > array1.length;i++)
+            {
+                if (array1[i] != array2[i])
+                {
+                    diff  = true;
+                }
+            }
+            if (diff == false)
+            {
+                equals = true;
+            }
+
+        }
 
         return equals;
     }
@@ -84,6 +148,9 @@ public class Homework {
         int[] copiedArray = null;
 
         // write your code here.
+        for (int i =1 ; i < array.length ; i++) {
+            copiedArray[i] = array[i];
+        }
 
         return copiedArray;
     }
@@ -92,6 +159,14 @@ public class Homework {
         int[] copiedArray = null;
 
         // write your code here.
+        if (array.length < length ||  length > 0 )
+        {
+            for (int i =1 ; i < array.length ; i++)
+            {
+                copiedArray[i] = array[i];
+            }
+
+        }
 
         return copiedArray;
     }
